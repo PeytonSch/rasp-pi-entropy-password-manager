@@ -38,7 +38,7 @@ class manager:
         tempFileLines = []
         while len(tempFileLines) != 4:
             temp = open("tempFile.txt",'wb')
-            n,ct,tag = encrypt(encrypt_this_string)
+            n,ct,tag = self.encrypt(encrypt_this_string)
             temp.write(user)
             temp.write('\n'.encode(encoding='UTF-8'))
             temp.write(n)
@@ -99,7 +99,7 @@ class manager:
         ct = ct[:-1]
         tag = tag[:-1]
 
-        decrypt(n,ct,tag)
+        self.decrypt(n,ct,tag)
 
         return
 
