@@ -5,6 +5,9 @@ import numpy as np
 import RPi.GPIO as GPIO
 import adcUtil  as adc
 
+from file_access import *
+
+
 class collector:
 
 
