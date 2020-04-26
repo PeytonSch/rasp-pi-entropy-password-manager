@@ -34,8 +34,8 @@ class collector:
             # get the state of the pin
             buttonState = GPIO.input(buttonPin)
 
-            gateStateArray.append(gateState)
-            buttonStateArray.append(buttonState)
+            gateStateArray = np.append(gateStateArray,gateState)
+            buttonStateArray = np.append(buttonStateArray,buttonState)
 
             #####################
             #LED
