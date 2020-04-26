@@ -1,6 +1,7 @@
 #This file will handle the reading of our sensor data from our rpi
 
 import time
+import numpy as np
 
 class collector:
     def __init__(self):
