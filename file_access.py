@@ -57,7 +57,7 @@ class manager:
 
         #write encrypted info to file
         f = open("savefile.txt","ab")
-        print(type(n))
+        #print(type(n))
         f.write(user)
         f.write('\n'.encode(encoding='UTF-8'))
         f.write(n)
@@ -147,11 +147,11 @@ class manager:
 
 def readButtonLines():
     lines = np.loadtxt("buttonStatus.txt")
-    print(type(lines))
+    #print(type(lines))
     return lines
 def readAudioLines():
     lines = np.loadtxt("soundDetectorStatus.txt")
-    print(type(lines))
+    #print(type(lines))
     return lines
 
 def writeNewData(buttonData,audioData):
