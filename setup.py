@@ -3,6 +3,7 @@
 
 # import the GPIO library
 import RPi.GPIO as GPIO
+import adcUtil  as adc
 
 #####################
 #LED STUFF
@@ -42,7 +43,18 @@ print(GPIO.input(buttonPin))
 '''
 
 
+#####################
+#Microphone
+#####################
+GPIO.setmode(GPIO.BCM)
+gatePin = 20
+GPIO.setup(gatePin, GPIO.IN)
 
+'''
+gateState = GPIO.input(gatePin)
+Vaudio    = adc.readADC(channel=0)
+Venvelope = adc.readADC(channel=1)
+'''
 
 
 #####################

@@ -3,9 +3,13 @@
 
 from file_access import *
 from generate import *
+from collect import *
 
 
 def run_main_menu():
+    generate = generator()
+    collector = collector()
+    manager = manager()
 
     #we will run this menu until a user decides to exit
     while True:
@@ -18,9 +22,14 @@ def run_main_menu():
 
         if user_selection == "1":
             #generate password
+            print("The LED will blink for 30 seconds, during this time you should make sound or press the button to generate a seed for your password")
+            collector.collectData()
+            password = generate.generateNewPassword()
+            manager.getOptions(password)
+
             continue
         elif user_selection == "2":
-            #recover password
+            manager.recoverPassword()
             continue
         elif user_selection == "3":
             print("Exiting")
