@@ -83,6 +83,11 @@ class manager:
         for line in lines:
             read_list.append(line)
 
+        #find the right user
+        for i in range(0,len(read_list),4):
+            current = read_list[i].decode(encoding='UTF-8')
+            print(current)
+
 
         print("Please type the name of the service you would like to recover your password for:")
 
