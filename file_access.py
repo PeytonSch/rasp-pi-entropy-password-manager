@@ -4,7 +4,7 @@ from Crypto.Cipher import AES
 import numpy as np
 
 class manager:
-    def def __init__(self)::
+    def __init__(self)::
         print("mananger intialized")
 
     def getOptions(password):
