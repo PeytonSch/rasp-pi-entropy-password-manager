@@ -2,6 +2,8 @@
 
 import time
 import numpy as np
+import RPi.GPIO as GPIO
+import adcUtil  as adc
 
 class collector:
     def __init__(self):
