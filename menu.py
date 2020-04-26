@@ -6,10 +6,7 @@ from generate import *
 from collect import *
 
 
-def run_main_menu():
-    generate = generator()
-    manager = manager()
-    collector = collector()
+def run_main_menu(generate,manager,collector):
 
 
     #we will run this menu until a user decides to exit

@@ -7,8 +7,15 @@ from menu import *
 
 
 #setup rpi
+setup()
+
+#instantiate classes
+generate = generator()
+manager = manager()
+collector = collector()
 
 #call menu
 run_main_menu()
 
 #cleanup
+cleanup()
