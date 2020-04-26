@@ -6,7 +6,8 @@ import numpy as np
 #inputs are from push button status and from sound detector status
 
 class generator:
-
+    def generator():
+        print("generator intialized")
     def generateNewPassword():
         #read input lines from save files
         buttonLine = readButtonLines()

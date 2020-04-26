@@ -9,6 +9,8 @@
 
 
 class collector:
+    def collector():
+        print("collector intialized")
 
     def collectData():
 

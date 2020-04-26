@@ -4,6 +4,9 @@ from Crypto.Cipher import AES
 import numpy as np
 
 class manager:
+    def manager():
+        print("mananger intialized")
+
     def getOptions(password):
         print("Please select a menu option by entering its number: ")
         print("1: Save Password")
