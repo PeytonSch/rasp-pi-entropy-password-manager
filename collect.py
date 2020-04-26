@@ -9,7 +9,7 @@
 
 
 class collector:
-    def collector():
+    def def __init__(self):
         print("collector intialized")
 
     def collectData():
