@@ -76,9 +76,13 @@ class manager:
 
         print("You have passwords saved for the following services:")
 
-        for i in range(0,len(read_list),4):
-            current = read_list[i].decode(encoding='UTF-8')
-            print(current)
+        f = open("savefile.txt", "rb")
+        lines = f.readlines()
+        read_list = []
+
+        for line in lines:
+            read_list.append(line)
+
 
         print("Please type the name of the service you would like to recover your password for:")
 
