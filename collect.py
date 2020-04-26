@@ -12,7 +12,7 @@ class collector:
     def __init__(self):
         print("collector intialized")
 
-    def collectData():
+    def collectData(self):
 
         to = time.time()
         t = to

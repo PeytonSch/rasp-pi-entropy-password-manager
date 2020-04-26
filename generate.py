@@ -8,7 +8,7 @@ import numpy as np
 class generator:
     def __init__(self):
         print("generator intialized")
-    def generateNewPassword():
+    def generateNewPassword(self):
         #read input lines from save files
         buttonLine = readButtonLines()
         audioLine = readAudioLines()

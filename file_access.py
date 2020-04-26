@@ -7,7 +7,7 @@ class manager:
     def __init__(self):
         print("mananger intialized")
 
-    def getOptions(password):
+    def getOptions(self,password):
         print("Please select a menu option by entering its number: ")
         print("1: Save Password")
         print("2: Exit without saving password to manager")
@@ -24,7 +24,7 @@ class manager:
                 print("Selection",user_selection, "is not an option")
 
 
-    def addNewPasswordToManager(password):
+    def addNewPasswordToManager(self,password):
         print("Please enter the service that this password should be connected to.")
         service = input("Service:")
 
@@ -72,7 +72,7 @@ class manager:
 
         return
 
-    def recoverPassword():
+    def recoverPassword(self):
 
         print("You have passwords saved for the following services:")
 
@@ -105,7 +105,7 @@ class manager:
 
 
 
-    def encrypt(message):
+    def encrypt(self,message):
         key = "Sixteen byte key"
         key = key.encode(encoding='UTF-8')
         cipher = AES.new(key, AES.MODE_EAX)
@@ -117,7 +117,7 @@ class manager:
         return [nonce,ciphertext,tag]
 
 
-    def decrypt(nonce,ciphertext,tag):
+    def decrypt(self,nonce,ciphertext,tag):
 
 
         key = "Sixteen byte key"
