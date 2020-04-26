@@ -64,7 +64,7 @@ class collector:
 
         plt.plot(np_time_array,np_value_array, label="Vaudio")
         plt.plot(np_time_array,np_envelope_array,label="Venvelope")
-        plt.plot(np_time_array,np_gate_state_array,label="Gate State")
+        plt.plot(np_time_array,gateStateArray,label="Gate State")
         plt.ylabel("Voltage Value")
         plt.xlabel("Time")
         plt.title("Mic Data")
