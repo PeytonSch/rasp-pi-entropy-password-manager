@@ -26,7 +26,7 @@ class collector:
         i = 0
         gateStateArray = np.array([])
         buttonStateArray = np.array([])
-        np_time_array = np.array([]])
+        np_time_array = np.array([])
         np_value_array = np.array([])
         np_envelope_array = np.array([])
         while t < to+10:
