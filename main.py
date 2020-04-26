@@ -15,7 +15,7 @@ manager = manager()
 collector = collector()
 
 #call menu
-run_main_menu()
+run_main_menu(generate,manager,collector)
 
 #cleanup
 cleanup()
