@@ -37,8 +37,8 @@ class collector:
             Vaudio    = adc.readADC(channel=0)
             Venvelope = adc.readADC(channel=1)
             gateStateArray = np.append(gateStateArray,gateState)
-            np_value_array = np.append(np_value_array,gateState)
-            np_envelope_array = np.append(np_envelope_array,gateState)
+            np_value_array = np.append(np_value_array,Vaudio)
+            np_envelope_array = np.append(np_envelope_array,Venvelope)
 
             #####################
             #Push Button
@@ -71,7 +71,12 @@ class collector:
         plt.legend()
         plt.show()
 
-        plt.plot(np_time_array,buttonStateArray,label="ButtonState")
+        plt.plot(np_time_array,buttonStateArray,label="Button State")
+        plt.ylabel("State")
+        plt.xlabel("Time")
+        plt.title("Button State")
+        plt.legend()
+        plt.show()
 
         writeNewData(buttonStateArray,gateStateArray)
 
