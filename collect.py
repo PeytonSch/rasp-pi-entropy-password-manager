@@ -4,6 +4,7 @@ import time
 import numpy as np
 import RPi.GPIO as GPIO
 import adcUtil  as adc
+import matplotlib.pyplot as plt
 
 from file_access import *
 
@@ -25,11 +26,19 @@ class collector:
         i = 0
         gateStateArray = np.array([])
         buttonStateArray = np.array([])
+        np_time_array = np.array([]])
+        np_value_array = np.array([])
+        np_envelope_array = np.array([])
         while t < to+10:
             #####################
             #Microphone
             #####################
             gateState = GPIO.input(gatePin)
+            Vaudio    = adc.readADC(channel=0)
+            Venvelope = adc.readADC(channel=1)
+            gateStateArray = np.append(gateStateArray,gateState)
+            np_value_array = np.append(np_value_array,gateState)
+            np_envelope_array = np.append(np_envelope_array,gateState)
 
             #####################
             #Push Button
@@ -37,7 +46,7 @@ class collector:
             # get the state of the pin
             buttonState = GPIO.input(buttonPin)
 
-            gateStateArray = np.append(gateStateArray,gateState)
+
             buttonStateArray = np.append(buttonStateArray,buttonState)
 
             #####################
@@ -50,6 +59,19 @@ class collector:
 
             t = time.time()
 
+            np_time_array = np.append(np_time_array,t)
+
+
+        plt.plot(np_time_array,value_array, label="Vaudio")
+        plt.plot(np_time_array,envelope_array,label="Venvelope")
+        plt.plot(np_time_array,gate_state_array,label="Gate State")
+        plt.ylabel("Voltage Value")
+        plt.xlabel("Time")
+        plt.title("Mic Data")
+        plt.legend()
+        plt.show()
+
+        plt.plot(np_time_array,buttonStateArray,label="ButtonState")
 
         writeNewData(buttonStateArray,gateStateArray)
 
