@@ -8,8 +8,9 @@ from collect import *
 
 def run_main_menu():
     generate = generator()
-    collector = collector()
     manager = manager()
+    collector = collector()
+
 
     #we will run this menu until a user decides to exit
     while True:
