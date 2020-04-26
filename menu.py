@@ -20,7 +20,7 @@ def run_main_menu(generate,manager,collector):
 
         if user_selection == "1":
             #generate password
-            print("The LED will blink for 30 seconds, during this time you should make sound or press the button to generate a seed for your password")
+            print("The LED will blink for 10 seconds, during this time you should make sound or press the button to generate a seed for your password")
             collector.collectData()
             password = generate.generateNewPassword()
             manager.getOptions(password)
