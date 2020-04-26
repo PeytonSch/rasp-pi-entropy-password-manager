@@ -15,7 +15,7 @@ class manager:
         while True:
             user_selection = input("Selection: ")
             if user_selection == "1":
-                addNewPasswordToManager(password)
+                self.addNewPasswordToManager(password)
                 print("Password successfully saved to file")
                 return
             elif user_selection == "2":
