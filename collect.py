@@ -22,7 +22,7 @@ class collector:
         i = 0
         gateStateArray = np.array([])
         buttonStateArray = np.array([])
-        while t < to+30:
+        while t < to+10:
             #####################
             #Microphone
             #####################
@@ -44,6 +44,8 @@ class collector:
             time.sleep(.5)             # wait
             GPIO.output(ledPin, False)  # turn off
             time.sleep(0.5)             # wait, then repeat
+
+            t = time.time()
 
 
         writeNewData(buttonStateArray,gateStateArray)
