@@ -13,7 +13,7 @@ def setup():
     # set GPIO numbering
     GPIO.setmode(GPIO.BCM)
     # assign a variable for the pin numer
-    ledPin = 27
+    ledPin = 25
     # set the GPIO pin to output mode
     GPIO.setup(ledPin, GPIO.OUT)
 
@@ -31,7 +31,7 @@ def setup():
     # use GPIO numbering
     GPIO.setmode(GPIO.BCM)
     # assign a variable for the pin numer
-    buttonPin = 27
+    buttonPin = 26
     # configure the GPIO pin to accept inputs, and activate the pull-up resistor
     # PUD_UP for internal pull-up resistor - returns 1 when the button is released
     GPIO.setup(buttonPin, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
@@ -48,7 +48,7 @@ def setup():
     #Microphone
     #####################
     GPIO.setmode(GPIO.BCM)
-    gatePin = 20
+    gatePin = 27
     GPIO.setup(gatePin, GPIO.IN)
 
     '''

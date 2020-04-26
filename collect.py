@@ -6,6 +6,11 @@ import RPi.GPIO as GPIO
 import adcUtil  as adc
 
 class collector:
+
+    ledPin = 25
+    buttonPin = 26
+    gatePin = 27
+
     def __init__(self):
         print("collector intialized")
 
