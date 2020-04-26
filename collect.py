@@ -62,9 +62,9 @@ class collector:
             np_time_array = np.append(np_time_array,t)
 
 
-        plt.plot(np_time_array,value_array, label="Vaudio")
-        plt.plot(np_time_array,envelope_array,label="Venvelope")
-        plt.plot(np_time_array,gate_state_array,label="Gate State")
+        plt.plot(np_time_array,np_value_array, label="Vaudio")
+        plt.plot(np_time_array,np_envelope_array,label="Venvelope")
+        plt.plot(np_time_array,np_gate_state_array,label="Gate State")
         plt.ylabel("Voltage Value")
         plt.xlabel("Time")
         plt.title("Mic Data")
